@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/MyaElla/express-workshop/issues"
   },
-  "homepage": "https://github.com/MyaElla/express-workshop#readme"
+  "homepage": "https://github.com/MyaElla/express-workshop#readme",
+  "dependencies": {
+    "express": "^4.17.0"
+  }
 }
