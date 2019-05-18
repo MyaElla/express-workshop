@@ -1,0 +1,22 @@
+{
+  "name": "nodegirls-workshop",
+  "version": "1.0.0",
+  "description": "nodegirls nodejs and express workshop",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MyaElla/express-workshop.git"
+  },
+  "keywords": [
+    "nodegirls"
+  ],
+  "author": "MyaElla",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MyaElla/express-workshop/issues"
+  },
+  "homepage": "https://github.com/MyaElla/express-workshop#readme"
+}
