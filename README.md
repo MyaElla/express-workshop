@@ -11,7 +11,11 @@ https://expressjs.com/
 https://www.npmjs.com/package/express-formidable
 
 
-## `node server.js`
+## Run server with `node server.js`
+
+- refresh browser
+- check console and Network in Developer tools
+- also check logs in terminal
 
 
 # Workshop
