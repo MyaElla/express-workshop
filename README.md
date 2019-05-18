@@ -1,7 +1,19 @@
-<img src="https://github.com/node-girls/workshop-cms/blob/master/readme-images/logo.png?raw=true">
+<img src="/public/img/node-express.jpg">
 
-# Express Workshop
+# Libraries used
 
-This is the code for our introductory workshop to Node.js and Express. You'll be building your own platform to write, publish and save blog posts (a basic content management system, or CMS).
+## express
 
-The workshop itself can be found <a href="https://node-girls.gitbook.io/intro-to-express">here</a>
+https://expressjs.com/
+
+## express-formidable
+
+https://www.npmjs.com/package/express-formidable
+
+
+## `node server.js`
+
+
+# Workshop
+
+The introductory workshop to Node.js and Express for Nodegirls London starts off with a boilerplate that can be found <a href="https://node-girls.gitbook.io/intro-to-express">here</a>. Thiw was taken further to building my own platform to write, publish and save blog posts (a basic content management system, or CMS).
