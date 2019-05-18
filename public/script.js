@@ -30,7 +30,7 @@ function postBlogposts (url, data) {
     .then(function (res) {
         res.json()
             .then(function (json) {
-                console.log(json);
+                console.log("json res", json);
                 addBlogpostsToPage(json);
                 document.querySelector('form').reset();
         })

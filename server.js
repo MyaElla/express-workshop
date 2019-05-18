@@ -1,27 +1,44 @@
-var fs = require("fs");
-var express = require("express");
-var formidable = require("express-formidable");
-var app = express();
+const fs = require("fs");
+const express = require("express");
+const formidable = require("express-formidable");
+const app = express();
 
 app.use(formidable());
 app.use(express.static("public"));
 
-// fs.writeFile("location-of-your-file-goes-here", yourData, function(error) {
-//   // do something
-// });
 
-fs.readFile(__dirname + "/data/posts.json", function(error, file) {
-   var parsedFile = JSON.parse(file);
-   console.log("parsedFile->", parsedFile);
+
+function savepost(post) {
+
+    fs.readFile(__dirname + "/data/posts.json", function(error, file) {
+    const parsedFile = JSON.parse(file);
+    const timestamp = Date.now();
+    parsedFile[timestamp] = post
+    fs.writeFile(
+        __dirname + "/data/posts.json",JSON.stringify(parsedFile,null,4), err => {
+        console.log(err || "json updated");
+        }
+    );
+    });
+}
+
+function getpost(data, callback) {
+    
+    fs.readFile(__dirname + "/data/posts.json", function(error, file) {
+    const parsedFile = JSON.parse(file);
+    callback(error, parsedFile);
+    });
+}
+
+app.post("/create-post", function(req, res) {
+    savepost(req.fields.blogpost)
+    res.send(req.fields);
 });
 
-// app.get("/chocolate", function(req, res) {
-//   res.send("Mm chocolate :O");
-// });
-app.post("/create-post", function(req, res) {
-//   console.log("req.body", req.body);
-  console.log("req.fields", req.fields);
-//   res.send("POST request to the homepage");
+app.get("/get-posts", function(req, res) {
+    getpost(res.fields, function(error, file) {
+    res.send(file);
+  });
 });
 
 app.listen(3000, function() {
