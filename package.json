@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/MyaElla/express-workshop#readme",
   "dependencies": {
-    "express": "^4.17.0"
+    "express": "^4.17.0",
+    "express-formidable": "^1.2.0"
   }
 }
