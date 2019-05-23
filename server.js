@@ -38,6 +38,7 @@ app.post("/create-post", function(req, res) {
 app.get("/get-posts", function(req, res) {
     getpost(res.fields, function(error, file) {
     res.send(file);
+    // res.sendFile("index.html"); // __dirname + "/data/posts.json" or res.sendFile(path.join(__dirname + '/index.html'));
   });
 });
 
